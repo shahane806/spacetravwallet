@@ -2,17 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ________________________________________________________________________________________________________________________________________
-#ProjectName : SpaceTravWallet 
-#Analytics : Google Analytics 
-#JavaScript frameworks : Emotion  React 
-#Web frameworks  : Express
-#Miscellaneous  : PWA 
-#Web servers  : Express 
-#Programming languages : Node.js 
-#Development : Emotion 
-#JavaScript libraries :  core-js 3.25.5
-#UI frameworks : MUI   
-#Authentication  : Google Sign-in
+#ProjectName : SpaceTravWallet <br><br>
+#Analytics : Google Analytics <br><br>
+#JavaScript frameworks : Emotion  React <br><br>
+#Web frameworks  : Express <br><br>
+#Miscellaneous  : PWA <br><br>
+#Web servers  : Express <br><br>
+#Programming languages : Node.js <br><br>
+#Development : Emotion <br><br>
+#JavaScript libraries :  core-js 3.25.5 <br><br>
+#UI frameworks : MUI   <br><br>
+#Authentication  : Google Sign-in <br><br>
 ________________________________________________________________________________________________________________________________________
 ## Available Scripts
 

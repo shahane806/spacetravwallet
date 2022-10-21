@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
-
+import GoogleLoginButton from "./GoogleLoginButton";
+import GoogleLogoutButton from "./GoogleLogoutButton";
 import { Avatar, Button, Grid } from "@mui/material";
 import "./Wallet.css";
 import { styled } from "@mui/material/styles";
@@ -14,13 +15,18 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-function Wallet() {
+
+function Wallet({logo,name,email}) {
+  
+  const w = window.width;
+  const h = window.height;
+
   return (
     <div className="walletMain">
       <Box
         sx={{
-          height: 700,
-          width: 600,
+          height: h,
+          width: w-1000,
           borderRadius: 1,
           backgroundColor: "#1A2010",
         }}
@@ -29,15 +35,18 @@ function Wallet() {
           <Grid item xs={15}>
             <Item>
               <div className="disc WalletNav ">
-               <Avatar src="" alt="Hello"/>
-                <h4 className="discription">Om Shahane</h4>
+                <Avatar src={logo} alt="Hello" />
+                <h3 className="discription">{name}</h3>
+                <Button>Withdraw</Button>
+                <Button>Deposite</Button>
               </div>
             </Item>
+           
           </Grid>
           <Grid item xs={4}>
             <Item>
               <div className="disc YourWalletBalance">
-                <h3 >SpaceTravWallet</h3>
+                <h3>Space Trav Wallet</h3>
                 <h4 className="discription">FSTW</h4>
               </div>
             </Item>
@@ -58,7 +67,7 @@ function Wallet() {
               </div>
             </Item>
           </Grid>
-        
+
           <Grid item xs={15}>
             <Item>
               <div className="ClickValue">
@@ -75,60 +84,52 @@ function Wallet() {
               </div>
             </Item>
           </Grid>
-        
+
           <Grid item xs={6}>
             <Item>
               <div className="startCampaign_stopCampaign">
-               <Button>Start Campaign</Button>
+                <Button>Start Campaign</Button>
               </div>
             </Item>
           </Grid>
-        
+
           <Grid item xs={6}>
             <Item>
               <div className="startCampaign_stopCampaign">
-               <Button>Stop Campaign</Button>
+                <Button>Stop Campaign</Button>
               </div>
             </Item>
           </Grid>
           <Grid item xs={6}>
             <Item>
               <div className="startCampaign_stopCampaign">
-               <Button>New Campaign</Button>
+                <Button>New Campaign</Button>
               </div>
             </Item>
           </Grid>
-        
-          <Grid item xs={3}>
+
+          <Grid item xs={6}>
+            <Item>
+              <div className="startCampaign_stopCampaign GoogleLoginButton">
+                <GoogleLoginButton />
+              </div>
+            </Item>
+          </Grid>
+          <Grid item xs={25}>
             <Item>
               <div className="startCampaign_stopCampaign">
-               <Button>Sign Up</Button>
-               
+                <GoogleLogoutButton />
               </div>
             </Item>
           </Grid>
-          <Grid item xs={3}>
-            <Item>
-              <div className="startCampaign_stopCampaign">
-              <Button>Login In</Button>
-              </div>
-            </Item>
-          </Grid>
-        
-        
-        
-         
+
           <Grid item xs={15}>
             <Item>
               <div className="OutPut">
-               <h3>Campaign Started : Successfully</h3>
+              <h3>{email}</h3>
               </div>
             </Item>
           </Grid>
-        
-        
-        
-         
         </Grid>
       </Box>
     </div>

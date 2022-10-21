@@ -1,0 +1,23 @@
+.Dashboard{
+     display:flex;
+     width:100%;
+     justify-content: space-between;
+     flex-direction: column;
+     padding:2px;
+     margin-top: 10%;
+
+}
+.WalletCardDashboard{
+     object-fit: contain;
+    height:40vh;
+    margin: auto;
+    margin-top: 30px;
+    
+    
+}
+.NavBodyDashboard{
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+
+}

@@ -4,20 +4,22 @@
      justify-content: space-between;
      flex-direction: column;
      padding:2px;
-     margin-top: 10%;
+     align-items: center;
 
 }
 .WalletCardDashboard{
      object-fit: contain;
-    height:40vh;
     margin: auto;
-    margin-top: 30px;
-    
-    
+    align-items: center;
+       
 }
 .NavBodyDashboard{
     align-items: center;
     text-decoration: none;
     text-align: center;
+   margin-bottom: 40px;
 
+}
+.items{
+    border:1px solid red;
 }

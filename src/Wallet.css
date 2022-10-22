@@ -9,12 +9,12 @@
     flex-direction: column;
     display:flex;
     justify-content: space-between;
-    max-width:200px;
+    max-width:400px;
     margin:13px;
 
 }
 .disc>h2,.disc>small{
-    margin:5px;
+    margin:4px;
 }
 .hr{
     height:1px;
@@ -40,4 +40,7 @@ h3,h4{
 .MuiBox-root{
     border:1px solid rgba(0, 255, 255, 0.485);
     
+}
+.st{
+    text-decoration: none;
 }

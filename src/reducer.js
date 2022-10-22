@@ -5,7 +5,9 @@ export const initialState = {
         name:null,
         email:null,
     },
- 
+    blog:{
+       items:[],
+    },
     token:null,
 };
 
@@ -29,9 +31,16 @@ const reducer = (state,action)=>{
                 user:action.user
             };
             
+        case 'SET_BLOG':
+            
+            return{
+                ...state,
+                blog:action.blog
+            };
             default: 
             return state;
-        }
+        };
+       
     }
    
     export default reducer;

@@ -1,10 +1,9 @@
 import { Button } from '@mui/material';
-import React from 'react'
 import './Login.css';
-import { accessUrl } from './GoogleAuth';
+import { accessUrl} from './GoogleAuth';
 
 export default function Login() {
- 
+  
   return (
     <div className='login'>
      

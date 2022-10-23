@@ -1,6 +1,6 @@
 export const authEndpoint = "https://accounts.google.com/o/oauth2/auth";
 export const clientId = "774017698454-4vj16o34r0ae4sj8inpnmopto2fchl72.apps.googleusercontent.com";
-export const redirectUri = "http://localhost:3000";
+export const redirectUri = "https://spacetravwallet.vercel.app";
 export const Key = "AIzaSyCrsyQg489GOcx0cVDLpx-K08PT5tfMi4Y";
 export const SpaceTravBlogId = "3517957744705188187";
 export const scopes = [

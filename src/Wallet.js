@@ -10,10 +10,10 @@ import React,{useEffect, useState} from 'react'
 import Item from "./Item";
 function Wallet({logo,name,email}) {
   
-  const w = window.width;
   const h = window.height;
+  const w = window.width;
   const[data_,setDATA]=useState();
-  const[{blog},dispatch]=DataLayerContextValue();
+  const[{blog,count},dispatch]=DataLayerContextValue();
    function on(){
   
     fetch('https://www.googleapis.com/blogger/v3/blogs/3517957744705188187/posts?key=AIzaSyCrsyQg489GOcx0cVDLpx-K08PT5tfMi4Y&maxResults=100').then((Response=>Response.json())).then(data=>{
@@ -37,7 +37,7 @@ function stop(){
       <Box
         sx={{
           height: h,
-          width: w-1000,
+          width: w,
           borderRadius: 1,
           backgroundColor: "#1A2010",
         }}
@@ -82,8 +82,8 @@ function stop(){
           <Grid item xs={15}>
             <Item>
               <div className="ClickValue">
-                <h3>Total Clicks</h3>
-                <h3>0</h3>
+                <h3>Total Views</h3>
+                <h3>{count}</h3>
               </div>
             </Item>
           </Grid>

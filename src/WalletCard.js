@@ -6,37 +6,46 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import './WalletCard.css';
+import { DataLayerContextValue } from './datalayer';
+export default function MediaCard({item}) {
+  let[{count},dispatch] = DataLayerContextValue();
+  function countF(){
+    count+=1;
+    // console.log(count);
+    dispatch({
+      type:"SET_COUNT",
+      count:count,
+    });
+  }
 
-export default function MediaCard({pageLink,Heading,discription}) {
-  // console.log(pageLink);
-  // console.log(Heading);
-  // console.log(discription);
-  let imgUrl = discription;
+  let imgUrl = item.content;
   imgUrl=imgUrl.split("<img");
   imgUrl=imgUrl[1].split("src=\"");
   imgUrl=imgUrl[1].split("\"");
   imgUrl=imgUrl[0];
-  console.log(imgUrl);
+  // console.log(imgUrl);
   return (
-   
-    <Card sx={{ maxWidth:9000  }}>
+   <div className='walletCardDiv'>
+
+    <Card sx={{width:400 }} >
       <CardMedia
         component="img"
         height="140"
         image={imgUrl}
-        alt={Heading}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-         {Heading}
+        alt={item.title}
+        />
+      <CardContent >
+        <Typography gutterBottom variant="h5"  component="div">
+         {item.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-      {Heading}
+      {item.title}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button href={pageLink} size="small">Learn More</Button>
+        <Button onClick={countF} href={item.url} size="small">Learn More</Button>
       </CardActions>
     </Card>
+        </div>
   );
 }

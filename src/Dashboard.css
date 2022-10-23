@@ -11,6 +11,7 @@
      object-fit: contain;
     margin: auto;
     align-items: center;
+    padding:30px;
        
 }
 .NavBodyDashboard{
@@ -20,6 +21,15 @@
    margin-bottom: 40px;
 
 }
-.items{
-    border:1px solid red;
+
+.flexWalletCard{
+    display:flex;
+    width:84rem;
+    
+    overflow-y: scroll;
+}
+@media only screen and (max-width: 1399px){
+    .flexWalletCard{
+        width: 24rem;
+    }
 }

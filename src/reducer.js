@@ -1,5 +1,5 @@
 
-export const initialState = {
+export let initialState = {
     user:{
         imageUrl:null,
         name:null,
@@ -9,6 +9,7 @@ export const initialState = {
        items:[],
     },
     token:null,
+    count:0,
 };
 
 const reducer = (state,action)=>{
@@ -36,6 +37,13 @@ const reducer = (state,action)=>{
             return{
                 ...state,
                 blog:action.blog
+            };
+        
+        case 'SET_COUNT':
+            
+            return{
+                ...state,
+                count:action.count
             };
             default: 
             return state;

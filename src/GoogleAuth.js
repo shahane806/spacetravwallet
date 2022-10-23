@@ -6,7 +6,7 @@ export const SpaceTravBlogId = "3517957744705188187";
 export const scopes = [
     "https://www.googleapis.com/auth/userinfo.email",
     "https://www.googleapis.com/auth/userinfo.profile",
-    "https://www.googleapis.com/auth/blogger",
+    //"https://www.googleapis.com/auth/blogger",
 ];
 
 export const responseToken = fromUrlFetchResponseToken();
